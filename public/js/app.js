@@ -13,7 +13,7 @@ const controls = document.querySelector(".controls");
 const spinner = document.querySelector(".spinner");
 
 // Create a client instance
-const client = new Paho.Client("127.0.0.1", 8888, "clienId");
+const client = new Paho.Client("iotnetworks-mqtt.herokuapp.com", 80, "clienId");
 
 // set callback handlers
 client.onConnectionLost = onConnectionLost;
