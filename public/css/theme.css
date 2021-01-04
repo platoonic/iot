@@ -1,0 +1,24 @@
+.container {
+  margin: 0 300px;
+}
+
+.panel {
+  margin-top: 50px;
+}
+
+.on {
+  background-color: green;
+}
+
+.off {
+  display: none;
+  background-color: darkred;
+}
+
+#turn-on {
+  display: none;
+}
+
+.controls {
+  display: none;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lighting Control Panel</title>
+  <link rel="stylesheet" href="css/uikit.min.css" />
+  <script src="js/uikit.min.js"></script>
+  <script src="js/uikit-icons.min.js"></script>
+  <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+  <div class="container">
+    <div class="panel">
+      <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">
+              <h3>Smart Lighting Control Panel</h3>
+              <div uk-spinner class="spinner"></div>
+              <div class="controls">
+                <table class="uk-table uk-align-left">
+                  <caption>Control Panel</caption>
+                  <thead>
+                      <tr>
+                          <th>Light</th>
+                          <th>Status</th>
+                          <th>Control</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>Light 1</td>
+                          <td><span class="uk-badge on">On</span></td>
+                          <td><span class="uk-badge off">Off</span></td>
+                          <td><button class="uk-button uk-button-primary" id="turn-off">Turn Off</button></td>
+                          <td><button class="uk-button uk-button-primary" id="turn-on">Turn On</button></td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.1.0/paho-mqtt.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
