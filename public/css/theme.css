@@ -6,16 +6,29 @@
   margin-top: 50px;
 }
 
-.on {
+.on1 {
   background-color: green;
 }
 
-.off {
+.off1 {
   display: none;
   background-color: darkred;
 }
 
-#turn-on {
+#turn-on1 {
+  display: none;
+}
+
+.on2 {
+  background-color: green;
+}
+
+.off2 {
+  display: none;
+  background-color: darkred;
+}
+
+#turn-on2 {
   display: none;
 }
 
