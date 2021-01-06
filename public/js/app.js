@@ -125,8 +125,12 @@ turnOffButton1.addEventListener("click", function () {
   // Hide Turn Off button and show Turn On
   turnOffButton1.style.display = "none";
   turnOnButton1.style.display = "block";
-  message = new Paho.Message("OFF");
+  let message = new Paho.Message("OFF");
   message.destinationName = "/LED/01/CONTROL";
+  client.send(message);
+
+  let message = new Paho.Message("TESTING");
+  message.destinationName = "test";
   client.send(message);
 });
 
