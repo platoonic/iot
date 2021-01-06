@@ -35,7 +35,8 @@ function onConnect() {
   spinner.style.display = "none";
   // Show the panel
   controls.style.display = "block";
-  client.subscribe("/LED/CONTROL");
+  client.subscribe("/LED/01/STATUS");
+  client.subscribe("/LED/02/STATUS");
 }
 
 // called when the client loses its connection
@@ -61,7 +62,7 @@ function onMessageArrived(message) {
   */
 
   // Light 01 status
-  if (message.destinationName === "/LIGHT/01/STATUS") {
+  if (message.destinationName === "/LED/01/STATUS") {
     if (message.payloadString === "ON") {
       // Turn on
       turnOnLight(1);
@@ -72,7 +73,7 @@ function onMessageArrived(message) {
   }
 
   // Light 02 status
-  if (message.destinationName === "/LIGHT/02/STATUS") {
+  if (message.destinationName === "/LED/01/STATUS") {
     if (message.payloadString === "ON") {
       // Turn on
       turnOnLight(2);
