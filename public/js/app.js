@@ -37,6 +37,7 @@ function onConnect() {
   controls.style.display = "block";
   client.subscribe("/LED/01/STATUS");
   client.subscribe("/LED/02/STATUS");
+  client.subscribe("/LDR");
 }
 
 // called when the client loses its connection
