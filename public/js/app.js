@@ -73,7 +73,7 @@ function onMessageArrived(message) {
   }
 
   // Light 02 status
-  if (message.destinationName === "/LED/01/STATUS") {
+  if (message.destinationName === "/LED/02/STATUS") {
     if (message.payloadString === "ON") {
       // Turn on
       turnOnLight(2);
@@ -91,8 +91,8 @@ function onMessageArrived(message) {
  */
 
 function turnOnLight(number) {
-  const offBadge = document.querySelector(`off${number}`);
-  const onBadge = document.querySelector(`on${number}`);
+  const offBadge = document.querySelector(`.off${number}`);
+  const onBadge = document.querySelector(`.on${number}`);
   // Hide Off badge
   offBadge.style.display = "none";
   // Show on badge
@@ -100,8 +100,8 @@ function turnOnLight(number) {
 }
 
 function turnOffLight(number, state) {
-  const offBadge = document.querySelector(`off${number}`);
-  const onBadge = document.querySelector(`on${number}`);
+  const offBadge = document.querySelector(`.off${number}`);
+  const onBadge = document.querySelector(`.on${number}`);
   // Hide On badge
   onBadge.style.display = "none";
   // Show Off badge
