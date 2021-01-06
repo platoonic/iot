@@ -17,6 +17,7 @@
             <div class="uk-card uk-card-default uk-card-body">
               <h3>Smart Lighting Control Panel</h3>
               <div uk-spinner class="spinner"></div>
+              <h6>Environment is <span class="env" style="font-weight: bold;">Dark</span></h6>
               <div class="controls">
                 <table class="uk-table uk-align-left">
                   <caption>Control Panel</caption>
@@ -30,17 +31,13 @@
                   <tbody>
                       <tr class="">
                           <td>Light 1</td>
-                          <td><span class="uk-badge on1">On</span></td>
-                          <td><span class="uk-badge off1">Off</span></td>
-                          <td><button class="uk-button uk-button-primary" id="turn-off1">Turn Off 1</button></td>
-                          <td><button class="uk-button uk-button-primary" id="turn-on1">Turn On 1</button></td>
+                          <td><span class="uk-badge off1">Off</span><span class="uk-badge on1">On</span><span class="uk-badge fault1">Fault!</span></td>
+                          <td><button class="uk-button uk-button-primary" id="turn-on1">Turn On 1</button><button class="uk-button uk-button-primary" id="turn-off1">Turn Off 1</button></td>
                       </tr>
                       <tr>
                         <td>Light 2</td>
-                        <td><span class="uk-badge on2">On</span></td>
-                        <td><span class="uk-badge off2">Off</span></td>
-                        <td><button class="uk-button uk-button-primary" id="turn-off2">Turn Off 2</button></td>
-                        <td><button class="uk-button uk-button-primary" id="turn-on2">Turn On 2</button></td>
+                        <td><span class="uk-badge off2">Off</span><span class="uk-badge on2">On</span><span class="uk-badge fault2">Fault!</span></td>
+                        <td><button class="uk-button uk-button-primary" id="turn-off2">Turn Off 2</button><button class="uk-button uk-button-primary" id="turn-on2">Turn On 2</button></td>
                     </tr>
                   </tbody>
                 </table>

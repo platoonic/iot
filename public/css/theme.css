@@ -15,6 +15,10 @@
   background-color: darkred;
 }
 
+.fault1 {
+  display: none;
+}
+
 #turn-on1 {
   display: none;
 }
@@ -26,6 +30,10 @@
 .off2 {
   display: none;
   background-color: darkred;
+}
+
+.fault2 {
+  display: none;
 }
 
 #turn-on2 {

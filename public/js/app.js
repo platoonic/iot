@@ -55,6 +55,7 @@ function onMessageArrived(message) {
     message.destinationName,
     message.payloadString
   );
+
   /*
   
     Respond to different events emitted by Arduino
@@ -66,9 +67,11 @@ function onMessageArrived(message) {
     if (message.payloadString === "ON") {
       // Turn on
       turnOnLight(1);
-    } else {
+    } else if (message.payloadString === "OFF") {
       // Turn off
       turnOffLight(1);
+    } else {
+      lightFault(1);
     }
   }
 
@@ -77,9 +80,21 @@ function onMessageArrived(message) {
     if (message.payloadString === "ON") {
       // Turn on
       turnOnLight(2);
-    } else {
+    } else if (message.payloadString === "OFF") {
       // Turn off
       turnOffLight(2);
+    } else {
+      lightFault(2);
+    }
+  }
+
+  // Environment Status
+  if (message.destinationName === "/LDR") {
+    const env = document.querySelector(".env");
+    if (message.payloadString === "BRIGHT") {
+      env.innerText = "Bright";
+    } else {
+      env.innerText = "Dark";
     }
   }
 }
@@ -93,19 +108,34 @@ function onMessageArrived(message) {
 function turnOnLight(number) {
   const offBadge = document.querySelector(`.off${number}`);
   const onBadge = document.querySelector(`.on${number}`);
+  const faultBadge = document.querySelector(`.fault${number}`);
   // Hide Off badge
   offBadge.style.display = "none";
+  faultBadge.style.display = "none";
   // Show on badge
   onBadge.style.display = "block";
 }
 
-function turnOffLight(number, state) {
+function turnOffLight(number) {
   const offBadge = document.querySelector(`.off${number}`);
   const onBadge = document.querySelector(`.on${number}`);
+  const faultBadge = document.querySelector(`.fault${number}`);
   // Hide On badge
   onBadge.style.display = "none";
+  faultBadge.style.display = "none";
   // Show Off badge
   offBadge.style.display = "block";
+}
+
+function lightFault(number) {
+  const offBadge = document.querySelector(`.off${number}`);
+  const onBadge = document.querySelector(`.on${number}`);
+  const faultBadge = document.querySelector(`.fault${number}`);
+  // Hide everything badge
+  onBadge.style.display = "none";
+  offBadge.style.display = "none";
+  // Show Off badge
+  faultBadge.style.display = "block";
 }
 
 /*
