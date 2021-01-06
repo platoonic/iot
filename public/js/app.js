@@ -126,7 +126,7 @@ turnOffButton1.addEventListener("click", function () {
   turnOffButton1.style.display = "none";
   turnOnButton1.style.display = "block";
   message = new Paho.Message("OFF");
-  message.destinationName = "/LIGHT/01/CONTROL";
+  message.destinationName = "/LED/01/CONTROL";
   client.send(message);
 });
 
@@ -136,7 +136,7 @@ turnOnButton1.addEventListener("click", function () {
   turnOnButton1.style.display = "none";
   turnOffButton1.style.display = "block";
   message = new Paho.Message("ON");
-  message.destinationName = "/LIGHT/01/CONTROL";
+  message.destinationName = "/LED/01/CONTROL";
   client.send(message);
 });
 
@@ -152,7 +152,7 @@ turnOffButton2.addEventListener("click", function () {
   turnOffButton2.style.display = "none";
   turnOnButton2.style.display = "block";
   message = new Paho.Message("OFF");
-  message.destinationName = "/LIGHT/02/CONTROL";
+  message.destinationName = "/LED/02/CONTROL";
   client.send(message);
 });
 
@@ -162,6 +162,6 @@ turnOnButton2.addEventListener("click", function () {
   turnOnButton2.style.display = "none";
   turnOffButton2.style.display = "block";
   message = new Paho.Message("ON");
-  message.destinationName = "/LIGHT/02/CONTROL";
+  message.destinationName = "/LED/02/CONTROL";
   client.send(message);
 });
