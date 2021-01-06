@@ -129,9 +129,9 @@ turnOffButton1.addEventListener("click", function () {
   message.destinationName = "/LED/01/CONTROL";
   client.send(message);
 
-  let message = new Paho.Message("TESTING");
-  message.destinationName = "test";
-  client.send(message);
+  let message2 = new Paho.Message("TESTING");
+  message2.destinationName = "test";
+  client.send(message2);
 });
 
 // Turn On
